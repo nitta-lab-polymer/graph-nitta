@@ -14,5 +14,5 @@ class SpineConfig(BaseModel):
 class AxConfig(BaseModel):
     x: SpineConfig = SpineConfig()
     y: SpineConfig = SpineConfig()
-    legends_loc: str = "upper right"
+    legends_loc: str = "upper left"
     bbox_to_anchor: tuple[float, float] | None = (1.0, 1.0)
