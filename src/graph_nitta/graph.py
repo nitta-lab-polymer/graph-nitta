@@ -1,7 +1,8 @@
 import math
 
 from matplotlib import pyplot as plt
-from style.apply import apply_basic_style
+
+from .style.apply import apply_basic_style
 
 
 def calc_grid(number_of_subplots: int):
