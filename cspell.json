@@ -6,12 +6,26 @@
     "language": "en",
     // words - list of words to be always considered correct
     "words": [
+        "hspace",
         "Kamono",
         "Makoto",
         "matplotlib",
+        "mplstyle",
         "nitta",
+        "ptick",
         "pydantic",
-        "pyproject"
+        "pyproject",
+        "scilimits",
+        "ticklabel",
+        "wspace",
+        "xaxis",
+        "xlabel",
+        "xlim",
+        "xscale",
+        "yaxis",
+        "ylabel",
+        "ylim",
+        "yscale"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.
