@@ -9,7 +9,7 @@ def calc_grid(number_of_subplots: int):
     return math.ceil(math.sqrt(number_of_subplots))
 
 
-def graph(
+def make_graph(
     number_of_subplots: int = 1, row: int | None = None, column: int | None = None
 ):
     fig = plt.figure()
