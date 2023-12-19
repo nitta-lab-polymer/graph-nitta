@@ -64,7 +64,7 @@ def apply_ax_config(ax: Axes, config: AxConfig = AxConfig()):
     apply_y_config(ax, config.y)
     ax.legend(loc=config.legends_loc)
     if config.bbox_to_anchor is not None:
-        ax.legend(bbox_to_anchor=config.bbox_to_anchor)
+        ax.legend(loc=config.legends_loc, bbox_to_anchor=config.bbox_to_anchor)
 
 
 class FixedOrderFormatter(ScalarFormatter):
