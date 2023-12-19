@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 packages = ["src/graph_nitta"]
 
 [project]
-version = "0.0.1"
+version = "0.0.2"
 name = "graph-nitta"
 authors = [{ name = "Kamono Makoto", email = "chengyaye31@gmail.com" }]
 description = "graph library wrapping matplotlib"
@@ -16,7 +16,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencies = ["pydantic", "pandas", "matplotlib"]
+dependencies = ["pydantic", "matplotlib"]
 
 [project.urls]
 Homepage = "https://github.com/nitta-lab-polymer/graph-nitta"
