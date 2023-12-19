@@ -1,17 +1,20 @@
 import math
+from typing import List, Optional, Tuple
 
 from matplotlib import pyplot as plt
+from matplotlib.axes import Axes
+from matplotlib.figure import Figure
 
 from .style.apply import apply_basic_style
 
 
-def calc_grid(number_of_subplots: int):
+def calc_grid(number_of_subplots: int) -> int:
     return math.ceil(math.sqrt(number_of_subplots))
 
 
 def make_graph(
-    number_of_subplots: int = 1, row: int | None = None, column: int | None = None
-):
+    number_of_subplots: int = 1, row: Optional[int] = None, column: Optional[int] = None
+) -> Tuple[Figure, List[Axes]]:
     fig = plt.figure()
     grid = calc_grid(number_of_subplots)
     row = row or grid

@@ -5,7 +5,7 @@ from matplotlib.ticker import ScalarFormatter
 from .config import AxConfig, SpineConfig
 
 
-def apply_x_config(ax: Axes, config: SpineConfig = SpineConfig()):
+def apply_x_config(ax: Axes, config: SpineConfig = SpineConfig()) -> None:
     ax.set_xlabel(config.label)
 
     if config.scale == "log":
@@ -31,8 +31,10 @@ def apply_x_config(ax: Axes, config: SpineConfig = SpineConfig()):
     if config.invert:
         ax.invert_xaxis()
 
+    return
 
-def apply_y_config(ax: Axes, config: SpineConfig = SpineConfig()):
+
+def apply_y_config(ax: Axes, config: SpineConfig = SpineConfig()) -> None:
     ax.set_ylabel(config.label)
 
     if config.scale == "log":
@@ -58,8 +60,10 @@ def apply_y_config(ax: Axes, config: SpineConfig = SpineConfig()):
     if config.invert:
         ax.invert_yaxis()
 
+    return
 
-def apply_ax_config(ax: Axes, config: AxConfig = AxConfig()):
+
+def apply_ax_config(ax: Axes, config: AxConfig = AxConfig()) -> None:
     apply_x_config(ax, config.x)
     apply_y_config(ax, config.y)
     if not config.is_visible_legend:
@@ -68,15 +72,21 @@ def apply_ax_config(ax: Axes, config: AxConfig = AxConfig()):
     if config.bbox_to_anchor is not None:
         ax.legend(loc=config.legends_loc, bbox_to_anchor=config.bbox_to_anchor)
 
+    return
+
 
 class FixedOrderFormatter(ScalarFormatter):
-    def __init__(self, order_of_mag=0, useOffset=True, useMathText=True):
+    def __init__(
+        self, order_of_mag: int = 0, useOffset: bool = True, useMathText: bool = True
+    ) -> None:
         self._order_of_mag = order_of_mag
         ScalarFormatter.__init__(
             self,
             useOffset=useOffset,
             useMathText=useMathText,
         )
+        return
 
-    def _set_orderOfMagnitude(self, range):
+    def _set_orderOfMagnitude(self) -> None:
         self.orderOfMagnitude = self._order_of_mag
+        return

@@ -1,11 +1,13 @@
+from typing import Optional, Tuple
+
 from pydantic import BaseModel
 
 
 class SpineConfig(BaseModel):
     label: str = ""
     scale: str = "linear"
-    lim: tuple[float, float] | None = None
-    step: float | None = None
+    lim: Optional[Tuple[float, float]] = None
+    step: Optional[float] = None
     pow: int = 0
     visible: bool = True
     invert: bool = False
@@ -16,4 +18,4 @@ class AxConfig(BaseModel):
     y: SpineConfig = SpineConfig()
     is_visible_legend: bool = True
     legends_loc: str = "upper left"
-    bbox_to_anchor: tuple[float, float] | None = (1.0, 1.0)
+    bbox_to_anchor: Tuple[float, float] = (1.0, 1.0)
