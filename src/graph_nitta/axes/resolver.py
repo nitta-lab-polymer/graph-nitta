@@ -62,6 +62,8 @@ def apply_y_config(ax: Axes, config: SpineConfig = SpineConfig()):
 def apply_ax_config(ax: Axes, config: AxConfig = AxConfig()):
     apply_x_config(ax, config.x)
     apply_y_config(ax, config.y)
+    if not config.is_visible_legend:
+        return
     ax.legend(loc=config.legends_loc)
     if config.bbox_to_anchor is not None:
         ax.legend(loc=config.legends_loc, bbox_to_anchor=config.bbox_to_anchor)
