@@ -5,7 +5,7 @@ matplotlibをラップしたグラフライブラリです。
 ## Usage
 
 ```sh
-pip install graph-nitta
+pip install -U graph-nitta
 ```
 
 ```py
