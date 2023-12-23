@@ -1,17 +1,19 @@
+from re import S
+
 import matplotlib.ticker as ptick
 from matplotlib.axes import Axes
 from matplotlib.ticker import ScalarFormatter
 
-from .config import AxConfig, SpineConfig
+from .config import AxConfig, Scale, SpineConfig
 
 
 def apply_x_config(ax: Axes, config: SpineConfig = SpineConfig()) -> None:
     ax.set_xlabel(config.label)
 
-    if config.scale == "log":
+    if config.scale == Scale.LOG:
         ax.set_xscale("log", base=10)
 
-    if config.scale == "linear":
+    if config.scale == Scale.LINER:
         if config.step is not None:
             ax.xaxis.set_major_locator(ptick.MultipleLocator(config.step))
         ax.xaxis.set_major_formatter(FixedOrderFormatter(0, useMathText=True))
@@ -37,10 +39,10 @@ def apply_x_config(ax: Axes, config: SpineConfig = SpineConfig()) -> None:
 def apply_y_config(ax: Axes, config: SpineConfig = SpineConfig()) -> None:
     ax.set_ylabel(config.label)
 
-    if config.scale == "log":
+    if config.scale == Scale.LOG:
         ax.set_yscale("log", base=10)
 
-    if config.scale == "linear":
+    if config.scale == Scale.LINER:
         if config.step is not None:
             ax.yaxis.set_major_locator(ptick.MultipleLocator(config.step))
         ax.yaxis.set_major_formatter(FixedOrderFormatter(0, useMathText=True))
