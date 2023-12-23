@@ -1,5 +1,3 @@
-from re import S
-
 import matplotlib.ticker as ptick
 from matplotlib.axes import Axes
 from matplotlib.ticker import ScalarFormatter
