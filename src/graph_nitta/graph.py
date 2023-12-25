@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-from .style.apply import apply_basic_style
+from graph_nitta.style.apply import apply_basic_style
 
 
 def calc_grid(number_of_subplots: int) -> int:
