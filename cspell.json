@@ -6,7 +6,9 @@
     "language": "en",
     // words - list of words to be always considered correct
     "words": [
+        "agis",
         "hspace",
+        "instron",
         "Kamono",
         "Makoto",
         "matplotlib",
@@ -15,8 +17,10 @@
         "ptick",
         "pydantic",
         "pyproject",
+        "raman",
         "scilimits",
         "ticklabel",
+        "twinx",
         "wspace",
         "xaxis",
         "xlabel",
