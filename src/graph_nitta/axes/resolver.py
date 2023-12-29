@@ -2,7 +2,7 @@ import matplotlib.ticker as ptick
 from matplotlib.axes import Axes
 from matplotlib.ticker import ScalarFormatter
 
-from .config import AxConfig, Scale, SpineConfig
+from graph_nitta.axes.config import AxConfig, Scale, SpineConfig
 
 
 def apply_x_config(ax: Axes, config: SpineConfig = SpineConfig()) -> None:
