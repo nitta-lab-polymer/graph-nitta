@@ -28,6 +28,6 @@ jobs:
           pip install .
       - name: Run tests
         run: |
-          pip install pytest
+          pip install pytest pandas
           cd tests
           pytest
