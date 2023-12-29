@@ -15,11 +15,11 @@ def calc_grid(number_of_subplots: int) -> int:
 def make_graph(
     number_of_subplots: int = 1, row: Optional[int] = None, column: Optional[int] = None
 ) -> Tuple[Figure, List[Axes]]:
+    apply_basic_style()
     fig = plt.figure()
     grid = calc_grid(number_of_subplots)
     row = row or grid
     column = column or grid
     fig.set_size_inches(8 * column, 8 * row)
     axes = [fig.add_subplot(row, column, i + 1) for i in range(number_of_subplots)]
-    apply_basic_style()
     return fig, axes
