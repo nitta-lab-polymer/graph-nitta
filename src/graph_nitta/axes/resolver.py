@@ -1,5 +1,5 @@
 import matplotlib.ticker as ptick
-from config import AxConfig, Scale, SpineConfig
+from axes.config import AxConfig, Scale, SpineConfig
 from matplotlib.axes import Axes
 from matplotlib.ticker import ScalarFormatter
 
