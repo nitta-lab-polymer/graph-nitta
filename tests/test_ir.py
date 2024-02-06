@@ -20,7 +20,6 @@ def test_ir():
     config = AxConfig(
         x=SpineConfig(label=df.columns[1], lim=(400, 4000)),
         y=SpineConfig(label=df.columns[2], visible=False),
+        is_visible_legend=False,
     )
     apply_ax_config(axes[0], config)
-
-    fig.show()
