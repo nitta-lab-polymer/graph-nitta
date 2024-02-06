@@ -33,7 +33,7 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest pandas
-          pytest tests
+          cd tests && pytest || cd -
       - name: ls test
         if: failure()
         run: |
