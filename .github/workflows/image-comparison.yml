@@ -34,6 +34,9 @@ jobs:
         run: |
           pip install pytest pandas
           pytest tests
+          ls .
+          ls tests
+          ls tests/result_images
       - name: "Upload Failed Tests' Diffs"
         uses: actions/upload-artifact@v3
         if: failure()
