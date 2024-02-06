@@ -35,6 +35,7 @@ jobs:
           pip install pytest pandas
           pytest tests
       - name: ls test
+        if: failure()
         run: |
           ls .
           ls tests
