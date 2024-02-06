@@ -38,13 +38,12 @@ jobs:
         if: failure()
         run: |
           ls .
-          ls tests
-          ls tests/result_images
+          ls result_images
       - name: "Upload Failed Tests' Diffs"
         uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: failed-tests-diffs
-          path: tests/result_images/**/*.png
+          path: result_images/**/*-diff.png
           retention-days: 3
           if-no-files-found: ignore
