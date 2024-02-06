@@ -39,5 +39,3 @@ def test_dma():
         ax2,  # type: ignore
         SpineConfig(label=df.columns[2], lim=(1e-2, 1e3), scale=Scale.LOG),
     )
-
-    fig.legend(bbox_to_anchor=(1, 1), loc=LegendLoc.UPPER_LEFT)

@@ -20,5 +20,6 @@ def test_raman():
     config = AxConfig(
         x=SpineConfig(label=df.columns[1], lim=(400, 1600)),
         y=SpineConfig(label=df.columns[2], visible=False, lim=(-1000, 15000)),
+        is_visible_legend=False,
     )
     apply_ax_config(axes[0], config)
