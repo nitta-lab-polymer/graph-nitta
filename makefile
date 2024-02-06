@@ -1,8 +1,9 @@
 .PHONY: test-local
 test-local:
+	@make clean
 	@echo "Running tests..."
 	pip install pytest .
-	@cd tests && pytest . || true
+	@pytest tests && make clean
 
 .PHONY: clean
 clean:
