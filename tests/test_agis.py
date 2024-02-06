@@ -18,7 +18,9 @@ def test_agis():
     axes[0].plot(df[df.columns[1]] * 1.1, df[df.columns[2]] * 1.1, label="sample2")
 
     # グラフの設定
-    config = AxConfig(x=SpineConfig(lim=(0, 5)), y=SpineConfig(lim=(0, 1)))
+    config = AxConfig(
+        x=SpineConfig(lim=(0, 5)),
+        y=SpineConfig(lim=(0, 1)),
+        is_visible_legend=False,
+    )
     apply_ax_config(axes[0], config)
-
-    # fig.show()

@@ -37,4 +37,4 @@ class AxConfig(BaseModel):
     y: SpineConfig = SpineConfig()
     is_visible_legend: bool = True
     legends_loc: LegendLoc = LegendLoc.UPPER_LEFT
-    bbox_to_anchor: Tuple[float, float] = (1.0, 1.0)
+    bbox_to_anchor: Tuple[float, float] = (1.2, 1.0)

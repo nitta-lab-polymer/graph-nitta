@@ -19,8 +19,8 @@ def test_instron():
 
     # グラフの設定
     config = AxConfig(
-        x=SpineConfig(lim=(0, 15), step=3), y=SpineConfig(lim=(0, 4), step=1)
+        x=SpineConfig(lim=(0, 15), step=3),
+        y=SpineConfig(lim=(0, 4), step=1),
+        is_visible_legend=False,
     )
     apply_ax_config(axes[0], config)
-
-    fig.show()
