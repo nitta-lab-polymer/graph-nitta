@@ -39,6 +39,6 @@ jobs:
         if: failure()
         with:
           name: failed-tests-diffs
-          path: ./tests/result_images/**
+          path: tests/**/**/**
           retention-days: 3
           if-no-files-found: ignore
