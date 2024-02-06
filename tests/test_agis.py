@@ -20,5 +20,3 @@ def test_agis():
     # グラフの設定
     config = AxConfig(x=SpineConfig(lim=(0, 5)), y=SpineConfig(lim=(0, 1)))
     apply_ax_config(axes[0], config)
-
-    # fig.show()

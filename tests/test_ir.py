@@ -22,5 +22,3 @@ def test_ir():
         y=SpineConfig(label=df.columns[2], visible=False),
     )
     apply_ax_config(axes[0], config)
-
-    fig.show()

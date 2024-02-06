@@ -22,5 +22,3 @@ def test_instron():
         x=SpineConfig(lim=(0, 15), step=3), y=SpineConfig(lim=(0, 4), step=1)
     )
     apply_ax_config(axes[0], config)
-
-    fig.show()

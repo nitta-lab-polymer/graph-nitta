@@ -22,5 +22,3 @@ def test_raman():
         y=SpineConfig(label=df.columns[2], visible=False, lim=(-1000, 15000)),
     )
     apply_ax_config(axes[0], config)
-
-    fig.show()
