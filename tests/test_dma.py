@@ -3,7 +3,6 @@ from pathlib import Path
 import pandas as pd
 from graph_nitta import (
     AxConfig,
-    LegendLoc,
     Scale,
     SpineConfig,
     apply_ax_config,
