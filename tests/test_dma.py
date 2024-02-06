@@ -26,14 +26,14 @@ def test_dma():
 
     # グラフにデータを追加
     axes[0].scatter(
-        df[df.columns[0]], df[df.columns[1]], label=df.columns[1], color="black", s=100
+        df[df.columns[0]], df[df.columns[1]], label=df.columns[1], color="black"
     )
     axes[0].scatter(
-        df[df.columns[0]], df[df.columns[2]], label=df.columns[2], color="red", s=100
+        df[df.columns[0]], df[df.columns[2]], label=df.columns[2], color="red"
     )
 
     axes[1].scatter(  # type: ignore
-        df[df.columns[0]], df[df.columns[3]], label=df.columns[3], color="blue", s=100
+        df[df.columns[0]], df[df.columns[3]], label=df.columns[3], color="blue"
     )
 
     # Configurations
