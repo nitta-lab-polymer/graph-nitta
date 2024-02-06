@@ -30,13 +30,14 @@ def test_dma():
 
     config = AxConfig(
         x=SpineConfig(label=df.columns[1], lim=(-150, 150), step=50),
-        y=SpineConfig(label=df.columns[2], scale=Scale.LOG),
+        y=SpineConfig(label=df.columns[2], lim=(1e3, 1e10), scale=Scale.LOG),
         is_visible_legend=False,
     )
     apply_ax_config(axes[0], config)
 
-    apply_y_config(ax2, SpineConfig(label=df.columns[2], scale=Scale.LOG))  # type: ignore
+    apply_y_config(
+        ax2,  # type: ignore
+        SpineConfig(label=df.columns[2], lim=(1e-2, 1e3), scale=Scale.LOG),
+    )
 
     fig.legend(bbox_to_anchor=(1, 1), loc=LegendLoc.UPPER_LEFT)
-
-    fig.show()
