@@ -40,9 +40,9 @@ def make_graph(
     column = column or grid
 
     width = 8 * column + (wspace * 10) * (column - 1)
-    hight = 8 * row + (hspace * 10) * (row - 1)
+    height = 8 * row + (hspace * 10) * (row - 1)
 
-    fig.set_size_inches(width, hight)
+    fig.set_size_inches(width, height)
     fig.subplots_adjust(wspace=wspace, hspace=hspace)
     axes = [fig.add_subplot(row, column, i + 1) for i in range(number_of_subplots)]
 
