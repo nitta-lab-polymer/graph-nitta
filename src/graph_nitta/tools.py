@@ -46,14 +46,17 @@ def get_colors(
         list[tuple[float, float, float, float]]: 色のリスト。RGBAの順
     """
 
-    maps = []
-    for i in range(number):
-        maps.append(
-            (
-                start[0] + (end[0] - start[0]) * i / (number - 1),
-                start[1] + (end[1] - start[1]) * i / (number - 1),
-                start[2] + (end[2] - start[2]) * i / (number - 1),
-                start[3] + (end[3] - start[3]) * i / (number - 1),
-            )
+    if number == 1:
+        return [start]
+
+    maps = [
+        (
+            start[0] + (end[0] - start[0]) * i / (number - 1),
+            start[1] + (end[1] - start[1]) * i / (number - 1),
+            start[2] + (end[2] - start[2]) * i / (number - 1),
+            start[3] + (end[3] - start[3]) * i / (number - 1),
         )
+        for i in range(number)
+    ]
+
     return maps
