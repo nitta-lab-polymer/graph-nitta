@@ -7,3 +7,4 @@ from graph_nitta.axes.resolver import apply_x_config as apply_x_config
 from graph_nitta.axes.resolver import apply_y_config as apply_y_config
 from graph_nitta.graph import make_graph as make_graph
 from graph_nitta.tools import arrow as arrow
+from graph_nitta.tools import get_colors as get_colors
