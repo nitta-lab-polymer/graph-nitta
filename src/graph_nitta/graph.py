@@ -29,7 +29,7 @@ def make_graph(
     number_of_subplots: int = 1,
     row: Optional[int] = None,
     column: Optional[int] = None,
-    wspace: float = 0.7,
+    wspace: float = 0.3,
     hspace: float = 0.3,
     is_visible_id: bool = True,
 ) -> Tuple[Figure, List[Axes]]:
