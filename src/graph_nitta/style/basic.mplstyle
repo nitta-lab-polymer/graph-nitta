@@ -7,9 +7,11 @@ legend.frameon: False
 axes.labelsize: 26
 axes.labelpad: 5
 axes.linewidth: 3
-lines.markersize: 10
 axes.titlesize: 26
 axes.titlepad: 16
+
+lines.markersize: 10
+lines.linewidth: 3
 
 xtick.labelsize: 25
 xtick.direction: in
